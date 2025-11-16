@@ -7,83 +7,101 @@
 <style>
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial;
-    background: #f2f6ff;
+    background: #f3f5f9;
     margin: 0;
-    padding: 20px;
+    padding: 24px;
     display: flex;
     justify-content: center;
   }
+
   .card {
-    width: 430px;
-    border-radius: 22px;
-    padding: 26px;
-    background: #ffffff;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+    width: 440px;
+    border-radius: 24px;
+    padding: 30px 26px;
+    background: #fff;
     position: relative;
     overflow: hidden;
+    box-shadow: 0px 8px 28px rgba(0,0,0,0.18);
   }
 
-  /* Background image (mặt trống Đông Sơn) */
+  /* Background theo chuẩn Zalo */
   .card::before {
     content: "";
     position: absolute;
     inset: 0;
     background: url('https://raw.githubusercontent.com/galilachile-stack/cccd-demo/f37f08df407baffad15c9a99816be11b91b1d54c/background.jpg') no-repeat center;
     background-size: cover;
-    opacity: 0.25;
+    opacity: 0.18;
     z-index: 0;
   }
 
-  .content { position: relative; z-index: 2; }
+  .content {
+    position: relative;
+    z-index: 2;
+  }
 
   .gov-icon {
-    width: 70px;
+    width: 72px;
     position: absolute;
-    top: 18px;
-    right: 18px;
+    top: 22px;
+    right: 22px;
+    opacity: 0.95;
   }
 
-  .title {
-    font-size: 18px;
+  .section-title {
+    font-size: 15px;
     font-weight: 600;
-    color: #777;
-    margin-bottom: 6px;
+    color: #7a7a7a;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    letter-spacing: 0.2px;
   }
 
-  .value {
-    font-size: 26px;
+  .big-value {
+    font-size: 30px;
     font-weight: 700;
-    margin-bottom: 22px;
     color: #000;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+  }
+
+  .mid-value {
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
   }
 
   .field-label {
-    color: #888;
-    font-size: 15px;
-    margin-top: 10px;
+    font-size: 14px;
+    color: #9a9a9a;
+    margin-top: 12px;
+    margin-bottom: 2px;
   }
 
   .field-value {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
+    color: #111;
   }
 </style>
 </head>
 <body>
   <div class="card">
+
     <img class="gov-icon" src="https://upload.wikimedia.org/wikipedia/commons/2/21/Quoc_huy_Viet_Nam.svg" />
 
     <div class="content">
-      <div class="title">Số CCCD</div>
-      <div class="value">0790 9103 2497</div>
+      <div class="section-title">Số CCCD</div>
+      <div class="big-value">0790 9103 2497</div>
 
-      <div class="title">Số CMND</div>
-      <div class="value" style="font-size: 20px;">024 515 129</div>
+      <div class="section-title">Số CMND</div>
+      <div class="mid-value">024 515 129</div>
 
       <div class="field-label">Họ và tên</div>
       <div class="field-value">Đặng Nguyễn Quốc Việt</div>
 
-      <div style="display:flex; justify-content:space-between; margin-top:10px;">
+      <div style="display:flex; justify-content:space-between; margin-top:14px; margin-bottom:12px;">
         <div>
           <div class="field-label">Giới tính</div>
           <div class="field-value">Nam</div>
@@ -95,11 +113,12 @@
       </div>
 
       <div class="field-label">Nơi thường trú</div>
-      <div class="field-value">15/1, Đường 13, kp4, An Khánh, TP. Thủ Đức, TP. Hồ Chí Minh</div>
+      <div class="field-value" style="font-size:18px; line-height:1.45;">15/1, Đường 13, kp4, An Khánh,<br>TP. Thủ Đức, TP. Hồ Chí Minh</div>
 
       <div class="field-label">Ngày cấp CCCD</div>
       <div class="field-value">21/08/2022</div>
     </div>
+
   </div>
 </body>
 </html>
