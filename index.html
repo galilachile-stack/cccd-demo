@@ -3,71 +3,102 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>CCCD Demo</title>
+<title>CCCD Zalo Style</title>
 <style>
   body {
-    font-family: Arial, sans-serif;
-    background: #e5f3ff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial;
+    background: #f2f6ff;
     margin: 0;
     padding: 20px;
     display: flex;
     justify-content: center;
   }
   .card {
-    width: 420px;
-    background: #d8ecff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    width: 430px;
+    border-radius: 22px;
+    padding: 26px;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+    position: relative;
+    overflow: hidden;
   }
-  .header {
-    text-align: center;
+
+  /* Background image (mặt trống Đông Sơn) */
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gIoSUNDX1BST0ZJTEUAAQEAAAIYanhsIAR...AAAAERjcHJ0AAABTAAAACR3dHB0AAABcAAAABRjaGFkAAABhAAAACxjaWNwAAAB') no-repeat center;
+    background-size: cover;
+    opacity: 0.25;
+    z-index: 0;
   }
-  .header img {
-    width: 80px;
+
+  .content { position: relative; z-index: 2; }
+
+  .gov-icon {
+    width: 70px;
+    position: absolute;
+    top: 18px;
+    right: 18px;
   }
+
   .title {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
-    color: #c62828;
+    font-size: 18px;
+    font-weight: 600;
+    color: #777;
+    margin-bottom: 6px;
   }
-  .info {
+
+  .value {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 22px;
+    color: #000;
+  }
+
+  .field-label {
+    color: #888;
+    font-size: 15px;
     margin-top: 10px;
-    font-size: 16px;
-    line-height: 1.6;
   }
-  .label {
-    font-weight: bold;
-  }
-  .photo {
-    width: 120px;
-    height: 150px;
-    background: #fff;
-    border: 1px solid #aaa;
-    margin-bottom: 10px;
+
+  .field-value {
+    font-size: 18px;
+    font-weight: 600;
   }
 </style>
 </head>
 <body>
   <div class="card">
-    <div class="header">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Quoc_huy_Viet_Nam.svg" alt="Quốc huy" />
-      <div>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM<br/>Độc lập - Tự do - Hạnh phúc</div>
-    </div>
+    <img class="gov-icon" src="https://upload.wikimedia.org/wikipedia/commons/2/21/Quoc_huy_Viet_Nam.svg" />
 
-    <div class="title">CĂN CƯỚC CÔNG DÂN</div>
+    <div class="content">
+      <div class="title">Số CCCD</div>
+      <div class="value">0790 9103 2497</div>
 
-    <div class="info">
-      <div class="photo"></div>
-      <div><span class="label">Họ và tên:</span> NGUYỄN VĂN A</div>
-      <div><span class="label">Ngày sinh:</span> 12/05/1990</div>
-      <div><span class="label">Giới tính:</span> Nam</div>
-      <div><span class="label">Quốc tịch:</span> Việt Nam</div>
-      <div><span class="label">Quê quán:</span> Hải Phòng</div>
-      <div><span class="label">Nơi thường trú:</span> Hà Nội</div>
-      <div><span class="label">Số định danh:</span> 001199000000</div>
+      <div class="title">Số CMND</div>
+      <div class="value" style="font-size: 20px;">024 515 129</div>
+
+      <div class="field-label">Họ và tên</div>
+      <div class="field-value">Đặng Nguyễn Quốc Việt</div>
+
+      <div style="display:flex; justify-content:space-between; margin-top:10px;">
+        <div>
+          <div class="field-label">Giới tính</div>
+          <div class="field-value">Nam</div>
+        </div>
+        <div>
+          <div class="field-label">Ngày sinh</div>
+          <div class="field-value">07/08/1991</div>
+        </div>
+      </div>
+
+      <div class="field-label">Nơi thường trú</div>
+      <div class="field-value">15/1, Đường 13, kp4, An Khánh, TP. Thủ Đức, TP. Hồ Chí Minh</div>
+
+      <div class="field-label">Ngày cấp CCCD</div>
+      <div class="field-value">21/08/2022</div>
     </div>
   </div>
 </body>
